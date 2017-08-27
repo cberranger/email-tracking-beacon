@@ -13,10 +13,6 @@ Send a POST request to ``/recipients`` with a JSON body in this  format ``{"emai
 
 e.g.``curl -X POST http://localhost:3000/recipients -H 'content-type: application/json' -d '{"email": "john@smith.com"}'``
 
-OR
-
-Use Postman https://www.getpostman.com/
-
 2. To receive mock emails: 
 open the URL created above in a web browser while the server is running to see it logged on to the console.
 ![Email Example](/images/email-log.png?raw=true)
