@@ -29,7 +29,6 @@ app.post('/recipients', (req, res)=>{
 		res.status(400);
 		res.send({error: '400 Bad Request'});
 	}
-	
 });
 
 app.get('/images/:recipientId', (req, res)=>{
@@ -66,34 +65,7 @@ app.get('/images/:recipientId', (req, res)=>{
 		res.sendFile(__dirname + '/images/logo.png');
 	}, (err)=>{
 		console.log(err);
-	});
-
-	// client.hget(recipientId, 'clientFingerprint', (err, clientFingerprint)=>{
-	// 	if(clientFingerprint === null || clientFingerprint === undefined){
-	// 		client.hmset(recipientId, {
-	// 			'clientFingerprint' : req.fingerprint.hash
-	// 		});
-	// 		deliveryStatus = 'This email was opend for the first time';
-	// 	} else if(clientFingerprint === req.fingerprint.hash){
-	// 		deliveryStatus = 'This email was likely reopened from same device'; 
-	// 	} else{
-	// 		deliveryStatus = 'This email was likely reopened from a device different than original'
-	// 	}
-
-	// 	client.hmset(recipientId, {
-	// 		'ipAddress': ipAddress,
-	// 		'timestamp': Date.now(),
-	// 	});
-
-	// 	client.hgetall(recipientId, (err, reply)=>{
-	// 		let trackingInfo = reply;
-	// 		trackingInfo.status = deliveryStatus;
-
-	// 		sendMockEmail(trackingInfo);
-			
-	// 		res.sendFile(__dirname + '/images/logo.png');
-	// 	});
-	// });	
+	});	
 });
 
 //Catch bad API routes
