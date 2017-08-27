@@ -10,8 +10,11 @@ Usage
 
 1. To get an image URL for a particular email address:
 Send a POST request to ``/recipients`` with a JSON body in this  format ``{"email": "john@smith.com"}``
+
 e.g.``curl -X POST http://localhost:3000/recipients -H 'content-type: application/json' -d '{"email": "john@smith.com"}'``
+
 OR
+
 Use Postman https://www.getpostman.com/
 
 2. To receive mock emails: 
